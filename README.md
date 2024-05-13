@@ -1,4 +1,4 @@
-# Terraform EC2 - Configuração Multiambiente
+# Terraform  AWS MQ Configuração
 
 ## Descrição
 
