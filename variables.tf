@@ -1,0 +1,10 @@
+variable "AWS_DEFAULT_REGION" {}
+variable "AWS_ACCESS_KEY_ID" {}
+variable "AWS_SECRET_ACCESS_KEY" {}
+variable "cidr_block_vpc" {}
+variable "prefix_enviroment" {}
+variable "name_security_group" {}
+variable "instance_type" {}
+variable "rabbitmq_user" {}
+variable "rabbitmq_password" {}
+variable "cidr_block_subnet" {}
