@@ -71,13 +71,13 @@ terraform apply -var-file="terraform.hom.tfvars"
     
 prefix_enviroment = "Dev"
 
-# VPC
+#VPC
 cidr_block_vpc = ""
 
-# Sucurity Group
+#Security Group
 name_security_group = "meu-security-group"
 
-# RabbitMQ
+#RabbitMQ
 instance_type     = "mq.m5.large"
 rabbitmq_user     = "admin"
 rabbitmq_password = ""
