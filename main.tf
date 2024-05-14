@@ -15,12 +15,12 @@ module "vpc" {
   cidr_block_subnet = var.cidr_block_subnet
 }
 
-module "security_group" {
-  source       = "./modules/security_group"
-  vpc_id       = module.vpc.vpc_id
-  prefixo_name = "${var.prefix_enviroment} - ${local.prefixo_servicos}"
-  name         = var.name_security_group
-}
+# module "security_group" {
+#   source       = "./modules/security_group"
+#   vpc_id       = module.vpc.vpc_id
+#   prefixo_name = "${var.prefix_enviroment} - ${local.prefixo_servicos}"
+#   name         = var.name_security_group
+# }
 
 module "rabbitmq" {
   source             = "./modules/rabbitmq"
@@ -29,5 +29,5 @@ module "rabbitmq" {
   rabbitmq_password  = var.rabbitmq_password
   prefixo_name       = "${var.prefix_enviroment} - ${local.prefixo_servicos}"
   private_subnet_ids = join(",", module.vpc.private_subnet_ids)
-  security_group     = module.security_group.security_group_id
+  # security_group     = module.security_group.security_group_id
 }

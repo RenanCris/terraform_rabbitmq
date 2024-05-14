@@ -25,6 +25,6 @@ variable "private_subnet_ids" {
   type = string
 }
 
-variable "security_group" {
-  type = string
-}
+# variable "security_group" {
+#   type = string
+# }

@@ -12,4 +12,8 @@ resource "aws_vpc" "config_vpc" {
 resource "aws_subnet" "config_private_subnet" {
   vpc_id     = aws_vpc.config_vpc.id
   cidr_block = var.cidr_block_subnet
+
+  tags = {
+    Name = "${var.prefixo_name} - Subnet"
+  }
 }
